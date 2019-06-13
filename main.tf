@@ -80,6 +80,7 @@ resource "openstack_compute_floatingip_associate_v2" "headnode_floating_ip" {
     inline = [
       "echo 'Beginning the provisioner exec....'",
       "sudo apt-get -y update",
+      "sudo apt-get -y update",
       "sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade",
       "sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python3-pip wget unzip",
       "sudo pip3 -q install ansible",
